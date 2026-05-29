@@ -1,0 +1,12 @@
+/* Remove default App.css styles as they clash with our custom theme */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}

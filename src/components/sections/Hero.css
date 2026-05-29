@@ -1,0 +1,187 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-content {
+  z-index: 10;
+  max-width: 800px;
+}
+
+/* Glitch Effect for Name */
+.glitch-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.glitch-name {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  position: relative;
+  display: inline-block;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.glitch-name::before,
+.glitch-name::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+}
+
+.glitch-name::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--primary-accent);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch-name::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--secondary-accent);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(10px, 9999px, 44px, 0); }
+  20% { clip: rect(66px, 9999px, 2px, 0); }
+  40% { clip: rect(98px, 9999px, 12px, 0); }
+  60% { clip: rect(33px, 9999px, 78px, 0); }
+  80% { clip: rect(55px, 9999px, 99px, 0); }
+  100% { clip: rect(12px, 9999px, 65px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(65px, 9999px, 100px, 0); }
+  20% { clip: rect(3px, 9999px, 55px, 0); }
+  40% { clip: rect(87px, 9999px, 12px, 0); }
+  60% { clip: rect(44px, 9999px, 88px, 0); }
+  80% { clip: rect(15px, 9999px, 33px, 0); }
+  100% { clip: rect(99px, 9999px, 4px, 0); }
+}
+
+.hero-subtitle {
+  font-family: var(--font-code);
+  font-size: 1.5rem;
+  color: var(--primary-accent);
+  margin-bottom: 1.5rem;
+  height: 2rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--primary-accent);
+  border: 1px solid var(--primary-accent);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 245, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  border-color: var(--secondary-accent);
+  color: var(--secondary-accent);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  transform: translateY(-2px);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-link {
+  color: var(--text-muted);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--primary-accent);
+  transform: translateY(-3px);
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-muted);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-20px) translateX(-50%); }
+  60% { transform: translateY(-10px) translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .glitch-name { font-size: 3rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .hero-ctas { flex-direction: column; }
+}

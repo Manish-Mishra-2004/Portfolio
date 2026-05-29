@@ -1,0 +1,38 @@
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-accent);
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--secondary-accent);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Hover effect on clickable elements */
+.cursor-ring.hovered {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 245, 255, 0.1);
+  border-color: var(--primary-accent);
+}
+
+/* Hide on smaller screens */
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-ring {
+    display: none;
+  }
+}
