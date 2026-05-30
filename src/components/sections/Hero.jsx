@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import Particles from 'react-tsparticles';
-import { loadSlim } from 'tsparticles-slim';
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
