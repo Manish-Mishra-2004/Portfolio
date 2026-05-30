@@ -85,7 +85,8 @@
 .profile-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center bottom;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -124,6 +125,32 @@
 .bio-highlight {
   color: var(--text-main);
   font-weight: 500;
+}
+
+.bio-scroll-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom Scrollbar for Bio */
+.bio-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bio-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 245, 255, 0.05);
+  border-radius: 10px;
+}
+
+.bio-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 245, 255, 0.3);
+  border-radius: 10px;
+}
+
+.bio-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 245, 255, 0.6);
 }
 
 .stats-grid {
