@@ -101,7 +101,7 @@ const Hero = () => {
           <div className="hero-subtitle">
             <Typewriter
               options={{
-                strings: ['Full Stack Developer', 'MERN Specialist', 'Problem Solver'],
+                strings: ['Full Stack Developer', 'MERN Specialist', 'AI Integrations Developer', 'GATE CSE 2026 Qualified'],
                 autoStart: true,
                 loop: true,
                 delay: 50,
@@ -111,7 +111,7 @@ const Hero = () => {
           </div>
 
           <p className="hero-description">
-            Building scalable web apps with React, Node.js & MongoDB. Passionate about crafting visually stunning and robust digital experiences.
+            Building scalable full-stack web applications with React, Node.js & TypeScript. Passionate about integrating AI capabilities and crafting visually stunning, production-grade experiences.
           </p>
 
           <div className="hero-ctas">

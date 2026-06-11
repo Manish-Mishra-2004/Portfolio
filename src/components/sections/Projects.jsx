@@ -5,32 +5,36 @@ import './Projects.css';
 
 const projectsData = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform built with MERN stack. Includes user authentication, product management, shopping cart, and Stripe payment integration.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-    github: '#',
-    live: '#'
+    title: 'InkMind',
+    description: 'A full-stack AI eBook creation platform where users generate, edit, and export structured eBooks using the Claude API with real-time streaming responses.',
+    tech: ['React 18', 'TypeScript', 'Supabase', 'Claude API', 'Vercel'],
+    github: 'https://github.com/Manish-Mishra-2004',
+    live: 'https://shorturl.at/cv491',
+    image: '/inkmind.png'
   },
   {
-    title: 'Real-time Chat Application',
-    description: 'A responsive chat application supporting real-time messaging, group creation, and media sharing using Socket.io.',
-    tech: ['Next.js', 'Socket.io', 'Tailwind CSS', 'PostgreSQL'],
-    github: '#',
-    live: '#'
+    title: 'Full-Stack Task Manager',
+    description: 'A MERN task management application covering backend essentials including database integration, user authentication (JWT), and secure REST API development.',
+    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS'],
+    github: 'https://github.com/Manish-Mishra-2004',
+    live: 'https://shorturl.at/gnv3z',
+    image: '/taskmanager.png'
   },
   {
-    title: 'AI Image Generator',
-    description: 'An application that leverages OpenAI APIs to generate and manipulate images based on text prompts. Features a credits system and image gallery.',
-    tech: ['React', 'OpenAI API', 'Node.js', 'MongoDB'],
-    github: '#',
-    live: '#'
+    title: 'Car Rental Platform',
+    description: 'A full-stack MERN car rental platform featuring a searchable catalogue, user booking system, and owner dashboard for listing and reservation management. Built during internship at IIT Jammu.',
+    tech: ['MongoDB', 'Express', 'React.js', 'Node.js', 'ImageKit', 'JWT'],
+    github: 'https://github.com/Manish-Mishra-2004',
+    live: 'https://github.com/Manish-Mishra-2004',
+    image: '/carrental.png'
   },
   {
-    title: 'Task Management System',
-    description: 'A Kanban-style task management tool with drag-and-drop functionality, team collaboration features, and progress tracking.',
-    tech: ['React', 'Redux', 'Firebase', 'Material-UI'],
-    github: '#',
-    live: '#'
+    title: 'AI Waste Management System',
+    description: 'An AI-based waste management system built in 24 hours that secured a Top Performer placement at Inverthon 2024. Led a 3-member team.',
+    tech: ['React.js', 'Tailwind CSS', 'OpenAI API', 'Node.js', 'Git'],
+    github: 'https://github.com/Manish-Mishra-2004',
+    live: 'https://github.com/Manish-Mishra-2004',
+    image: '/wastemanagement.png'
   }
 ];
 
@@ -70,7 +74,11 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <motion.div key={index} className="project-card neon-glow" variants={itemVariants}>
             <div className="project-image-container">
-              <span className="project-placeholder">[ Project Image ]</span>
+              {project.image ? (
+                <img src={project.image} alt={project.title} className="project-img" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              ) : (
+                <span className="project-placeholder">[ Project Image ]</span>
+              )}
             </div>
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>

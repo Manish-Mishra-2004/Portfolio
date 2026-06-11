@@ -1,27 +1,27 @@
 import { motion } from 'framer-motion';
-import { Database, Layout, Server, Wrench } from 'lucide-react';
+import { Code, Server, Wrench, Cpu } from 'lucide-react';
 import './Skills.css';
 
 const skillCategories = [
   {
-    title: 'Frontend',
-    icon: <Layout size={24} className="category-icon" />,
-    skills: ['React.js', 'Next.js', 'JavaScript (ES6+)', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Redux', 'HTML5/CSS3']
+    title: 'Languages',
+    icon: <Code size={24} className="category-icon" />,
+    skills: ['JavaScript', 'TypeScript', 'C++', 'Python', 'HTML/CSS', 'SQL']
   },
   {
-    title: 'Backend',
+    title: 'Frameworks & Libraries',
     icon: <Server size={24} className="category-icon" />,
-    skills: ['Node.js', 'Express.js', 'RESTful APIs', 'GraphQL', 'Python', 'WebSockets', 'JWT Auth']
+    skills: ['React.js', 'Node.js', 'Express.js', 'Redux Toolkit', 'Tailwind CSS', 'Vite', 'React Router']
   },
   {
-    title: 'Database',
-    icon: <Database size={24} className="category-icon" />,
-    skills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Mongoose', 'Prisma']
-  },
-  {
-    title: 'Tools & DevOps',
+    title: 'Developer Tools',
     icon: <Wrench size={24} className="category-icon" />,
-    skills: ['Git & GitHub', 'Docker', 'AWS', 'Vercel', 'Postman', 'Linux', 'Jest']
+    skills: ['VS Code', 'Git', 'GitHub', 'Postman', 'MongoDB Atlas', 'Supabase', 'Vercel', 'ImageKit']
+  },
+  {
+    title: 'AI & Integrations',
+    icon: <Cpu size={24} className="category-icon" />,
+    skills: ['Claude API', 'Gemini API', 'OpenAI', 'Clerk', 'Stripe', 'Inngest', 'CodeRabbit']
   }
 ];
 

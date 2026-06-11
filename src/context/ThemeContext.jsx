@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useEffect, useContext } from 'react';
 
 const ThemeContext = createContext();
@@ -5,17 +6,15 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('dark');
-
-  useEffect(() => {
+  const [theme, setTheme] = useState(() => {
     // Check local storage or system preference on initial load
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      setTheme('light');
+    const savedTheme = localStorage?.getItem('theme');
+    if (savedTheme) return savedTheme;
+    if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
     }
-  }, []);
+    return 'dark';
+  });
 
   useEffect(() => {
     // Apply theme to body

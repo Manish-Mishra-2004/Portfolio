@@ -5,6 +5,7 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import './Navbar.css';
 
+// manish-portfolio-black.vercel.app
 const navItems = [
   { name: 'Home', to: 'home' },
   { name: 'About', to: 'about' },

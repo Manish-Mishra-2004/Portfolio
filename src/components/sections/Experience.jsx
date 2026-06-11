@@ -3,35 +3,22 @@ import './Experience.css';
 
 const experienceData = [
   {
-    role: 'Full Stack Developer',
-    company: 'Tech Solutions Inc.',
-    duration: 'Jan 2023 - Present',
+    role: 'Research & Development Intern',
+    company: 'IIT Jammu',
+    duration: 'Jun 2025 - Aug 2025',
     details: [
-      'Developed and maintained scalable web applications using the MERN stack.',
-      'Improved database query performance by 40% through indexing and aggregation optimization.',
-      'Collaborated with cross-functional teams to design and implement new features.',
-      'Mentored junior developers and conducted code reviews.'
-    ]
-  },
-  {
-    role: 'Frontend Developer',
-    company: 'Creative Agency',
-    duration: 'Jun 2021 - Dec 2022',
-    details: [
-      'Built interactive and responsive user interfaces using React.js and Framer Motion.',
-      'Translated UI/UX design wireframes to actual code that produced visual elements of the application.',
-      'Optimized application for maximum speed and scalability.',
-      'Integrated third-party APIs and payment gateways.'
+      'Built a full-stack MERN car rental platform (React.js, Node.js, Express, MongoDB) with searchable catalogue, user booking system, and owner dashboard for listing and reservation management.',
+      'Integrated ImageKit for cloud-based image storage; implemented JWT authentication and role-based access control for 50+ user and owner accounts. Deployed on Vercel with production CI/CD pipeline.',
+      'Collaborated in an Agile 4-member team using Git branching workflows, delivering all project milestones on schedule.'
     ]
   },
   {
     role: 'Web Development Intern',
-    company: 'Startup Hub',
-    duration: 'Jan 2021 - May 2021',
+    company: 'AICTE',
+    duration: 'Apr 2025 - Jun 2025',
     details: [
-      'Assisted in the development of a company internal dashboard using HTML, CSS, and JavaScript.',
-      'Participated in daily stand-ups and agile development processes.',
-      'Wrote unit tests and improved overall code coverage.'
+      'Built a functional e-commerce frontend with product listing, cart, checkout, filtering, and search using Redux Toolkit for state management and FakeStoreAPI for real-time product data via Redux Thunk.',
+      'Designed a responsive UI with React.js and Tailwind CSS; wrote clean, modular component architecture following best practices for scalability and code reuse.'
     ]
   }
 ];
