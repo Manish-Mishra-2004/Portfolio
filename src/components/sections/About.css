@@ -85,9 +85,8 @@
 .profile-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-  opacity: 0.8;
+  object-fit: cover;
+  opacity: 0.9;
   transition: opacity 0.3s ease;
 }
 
